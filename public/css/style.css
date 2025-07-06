@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+}
+
+
+.navbar {
+  background-color: white;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: flex-start; /* semua di kiri */
+  align-items: center;
+  gap: 40px; /* jarak antara logo dan nav links */
+  box-shadow: 0 5px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  margin-left: 10px; /* geser ke kiri */
+}
+
+.brand-highlight {
+  color: #0a58ca; /* Bisa ganti warna sesuai selera */
+  font-weight: bold;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* jarak antar link */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  
+  color: #0a58ca;
+  border-radius: 6px;
+  
+}
+
+.contain{
+    margin-top: 35px;
+}
+
+.List-Contact{
+    margin-left: 20px;
+}
+
+.add-btn {
+      background-color: #0a58ca;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+ .add-btn a{
+      color: white;
+      text-decoration: none;
+ }
+
+
+    .add-btn:hover {
+      background-color: #084298;
+    }
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0a58ca;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .action-btn {
+      margin-right: 8px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .edit-btn {
+      background-color: #ffc107;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+    }
+
+     h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      margin-left: 50px;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin-top: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .submit-btn {
+      background-color: #0a58ca;
+      color: white;
+      text-decoration: none;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+
+    .submit-btn:hover {
+      background-color: #084298;
+    }
+
+    .back-btn {
+      background-color: #474748;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .back-btn a{
+       color: white;
+       text-decoration: none;
+    }
+
+
+    .back-btn:hover {
+      background-color: #333;
+    }
+    
+    .deletebox{
+    display: none;
+    position: fixed;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    left: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.deletebox p{
+  font-size: 25px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.deletebox .btn-container {
+    display: flex; /* Pastikan ini ada jika Anda ingin tombol sejajar */
+    gap: 20px; /* Jarak antara tombol "yes" dan "no" */
+    margin-top: 40px;
+    margin-left: 120px; /* Sesuaikan nilai ini untuk seberapa jauh Anda ingin tombol turun */
+}
+
+.deletebox .yes{
+      background-color: #d31709;
+      color: white;
+      text-decoration: none;
+      border: none;
+      padding: 10px 40px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+}
+
+.deletebox .yes:hover{
+   background-color: #8b160d;
+}
+
+.deletebox .no{
+      background-color: #0a58ca;
+      color: white;
+      text-decoration: none;
+      border: none;
+      padding: 10px 40px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+
+}
+ 
+ .deletebox .no:hover{
+   background-color: #084298;
+}
+
+.change-color {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+  display: none;
+}
+
+.flash-error {
+  background-color: #ffd6d6;     /* merah muda */
+  color: #a30000;                /* merah tua */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.flash-errorNumber {
+  background-color: #ffd6d6;     /* merah muda */
+  color: #a30000;                /* merah tua */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ✅ RESPONSIVE UNTUK HP */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+.nav-links a:hover {
+  
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+  .brand {
+  margin-left: -10px; /* geser ke kiri */
+}
+}

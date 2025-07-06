@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    const users = [
+  { id: 1, name: 'Alice' },
+  { id: 2, name: 'Bob' },
+  { id: 3, name: 'Charlie' }
+];
+
+// Mengganti nama menjadi huruf kapital semua
+const updatedUsers = users.map(user => {
+  return {
+    ...user, // Menyalin properti objek yang ada
+    name: user.name.toUpperCase() // Mengubah nama menjadi huruf kapital
+  };
+});
+
+console.log(updatedUsers);
+// Output:
+// [
+//   { id: 1, name: 'ALICE' },
+//   { id: 2, name: 'BOB' },
+//   { id: 3, name: 'CHARLIE' }
+// ]
+
+console.log(users);
+// Output:
+// [
+//   { id: 1, name: 'Alice' },
+//   { id: 2, name: 'Bob' },
+//   { id: 3, name: 'Charlie' }
+// ]
+</script>
+</body>
+</html>

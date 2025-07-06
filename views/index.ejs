@@ -1,0 +1,95 @@
+ 
+ 
+<div class="contain">
+ <h2 class="List-Contact">List Contact</h2>
+
+ <button class="add-btn">
+    <a href="/formcontact">Add New Contact</a>
+ </button>
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Number HP</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+       <% if (contacts.length < 1) { %>
+    <p>List Contact Empty</p>
+ <% } else{ %> 
+  
+<% contacts.forEach((frs,i) => { %>
+    <tr>
+       <td>
+        <%= i+1 %>
+       </td>
+       <td>
+        <%= frs.nama %>
+       </td>
+       <td>
+        <%= frs.nomor %>
+       </td>
+        <td>
+          <a href="/edit/<%= encodeURIComponent(frs.nama) %>" class=" action-btn edit-btn">Edit</a>
+          <a class="action-btn delete-btn" data-nama="<%= frs.nama %>">Delete</a>
+        </td>
+
+       <div class="deletebox" id="deletebox" style="display:none;">
+  <p id="delete-message"></p>
+  <div class="btn-container">
+    <a href="#" class="yes" id="yes-btn">Yes</a>
+    <a href="/" class="no">Cancel</a>
+  </div>
+</div>
+
+<div class="change-color" style="display:none;"></div>
+
+    </div>
+
+    </tr>
+   
+ <% }) %> <% } %>
+   
+    </tbody>
+  </table>
+
+<div class="change-color"></div>
+</div>
+
+<script>
+const deleteBtns = document.querySelectorAll('.delete-btn');
+const deleteBox = document.getElementById('deletebox');
+const changeColor = document.querySelector('.change-color');
+const yesBtn = document.getElementById('yes-btn');
+const deleteMessage = document.getElementById('delete-message');
+
+deleteBtns.forEach((btn) => {
+  btn.addEventListener('click', function (e) {
+    const namaContact = btn.getAttribute('data-nama');
+    
+    // Tampilkan popup
+    deleteBox.style.display = 'block';
+    changeColor.style.display = 'block';
+
+    // Ubah pesan dan tautan YES
+    deleteMessage.innerText = `Are you sure you want to delete "${namaContact}"?`;
+    yesBtn.setAttribute('href', `/delete/${encodeURIComponent(namaContact)}`);
+
+    // Hentikan event bubbling
+    e.stopPropagation();
+  });
+});
+
+// Tutup popup kalau klik di luar
+document.addEventListener('click', function (e) {
+  if (!deleteBox.contains(e.target)) {
+    deleteBox.style.display = 'none';
+    changeColor.style.display = 'none';
+  }
+});
+</script>

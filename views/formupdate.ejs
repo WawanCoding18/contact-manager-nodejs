@@ -1,0 +1,38 @@
+<div class="form-container">
+    <form action="/update" method="POST" id='loginForm'>
+      <h2>Update Contact</h2>
+            <% if (errorMsg.length > 0) { %>
+      <div class="flash-error"><%= errorMsg %></div>
+        <% } %>
+
+           <% if (errorNumber.length > 0) { %>
+      <div class="flash-errorNumber"><%= errorNumber %></div>
+        <% } %>
+
+       <!-- Username (Hidden) -->
+<input type="hidden" id="namalama" name="namalama" required
+  value="<%= (typeof oldData !== 'undefined' && oldData.nama) ? oldData.nama : (contacts?.nama || '') %>">
+
+<!-- Username (Input) -->
+<input type="text" id="nama" name="nama" required
+  value="<%= (typeof oldData !== 'undefined' && oldData.nama) ? oldData.nama : (contacts?.nama || '') %>">
+
+<!-- Number (Hidden) -->
+<input type="hidden" id="nomorlama" name="nomorlama" required
+  value="<%= (typeof oldData !== 'undefined' && oldData.nomor) ? oldData.nomor : (contacts?.nomor || '') %>">
+
+<!-- Number (Input) -->
+<input type="tel" id="nomor" name="nomor" required
+  value="<%= (typeof oldData !== 'undefined' && oldData.nomor) ? oldData.nomor : (contacts?.nomor || '') %>">
+
+
+      <button type="submit" class="submit-btn">
+        Update
+      </button>
+       
+      <button class="back-btn">
+        <a href="/">Back</a>
+      </button>
+         
+    </form>
+</div>

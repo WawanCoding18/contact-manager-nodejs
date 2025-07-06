@@ -1,0 +1,69 @@
+<div class="form-container">
+    <form action="/data" method="POST" id='loginForm'>
+      <h2>Form Add New Contact</h2>
+            <% if (errorMsg.length > 0) { %>
+      <div class="flash-error"><%= errorMsg %></div>
+        <% } %>
+
+           <% if (errorNumber.length > 0) { %>
+      <div class="flash-errorNumber"><%= errorNumber %></div>
+        <% } %>
+
+        <label for="nama">Username:</label>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama..." required
+      value="<%= typeof oldData !== 'undefined' && oldData.nama ? oldData.nama : '' %>">
+
+    <label for="nomor">Number Phone:</label>
+    <input type="tel" id="nomor" name="nomor" placeholder="Contoh: 08123456789" required
+      value="<%= typeof oldData !== 'undefined' && oldData.nomor ? oldData.nomor : '' %>">
+
+      <button type="submit" class="submit-btn">
+        Add New Contact
+      </button>
+    
+         
+    </form>
+</div>
+
+<script>
+//    //fungsi untuk menangani event submit pada form login
+//  document.getElementById('loginForm').addEventListener('submit', async function(e){
+//            //mencegah reload halaman
+//             // e.preventDefault()
+//                // Ambil nilai input
+//     const username = document.getElementById('nama').value.trim();
+//     const password = document.getElementById('nomor').value.trim();
+//     // Validasi minimal 8 karakter
+//     if (username.length < 8 || password.length < 8) {
+//         alert("Username dan nomor hp minimal 8 karakter!");
+//         return; // Batalkan submit
+//     } 
+//             //mengambil data dari form dan mengirimkannya ke server
+//             const formData = new FormData(this)
+//             const params = new URLSearchParams(formData)
+//          try{
+
+//             //menggunakan fetch untuk mengirim data ke server
+//             const response = await fetch("http://localhost:3010/data", {
+//                 method:'POST',
+//                 headers:{
+//                     'Content-Type': 'application/x-www-form-urlencoded'
+//                 },
+//                 body: params
+//             })
+
+//             //menangani response dari server
+    
+//             //menampilkan hasil response ke dalam elemen dengan id result
+       
+//             // console.log(JSON.stringify(result, null, 2))
+//          } catch(error){
+
+//             //menangani error jika terjadi
+//             document.getElementById('result').textContent =  error;
+//             console.log(error);
+//          }
+            
+//          })
+
+</script>

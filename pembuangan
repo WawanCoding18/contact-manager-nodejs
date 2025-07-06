@@ -1,0 +1,185 @@
+
+ <h1>Ini adalah halaman home</h1>
+
+ <h2>Halo<%= nama %></h2>
+
+ <h4>Daftar My Friends</h4>
+
+ <% if (myfriends.length < 1) { %>
+       <p>Data myfriends masih kosong</p>
+ <% } else{ %> 
+  
+<% myfriends.forEach(frs => { %>
+    <ul>
+       <li>
+        Nama: <%= frs.nama %>
+       </li>
+       <li>
+        id: <%= frs.id %>
+       </li>
+    </ul>
+  
+ <% }) %> <% } %>
+
+ <td>1</td>
+        <td>Wawan</td>
+        <td>081234567890</td>
+        <td>
+          <button class="action-btn edit-btn">Edit</button>
+          <button class="action-btn delete-btn">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sinta</td>
+        <td>082212345678</td>
+        <td>
+          <button class="action-btn edit-btn">Edit</button>
+          <button class="action-btn delete-btn">Delete</button>
+        </td>
+      </tr>
+
+
+          <% if (myfriends.length < 1) { %>
+       <p>List Contact Empty</p>
+ <% } else{ %> 
+  
+<% myfriends.forEach(frs => { %>
+    <tr>
+       <td>
+        <%= frs.number %>
+       </td>
+       <td>
+        <%= frs.nama %>
+       </td>
+       <td>
+        <%= frs.no_hp %>
+       </td>
+        <td>
+          <button class="action-btn edit-btn">Edit</button>
+          <button class="action-btn delete-btn">Delete</button>
+        </td>
+
+    </tr>
+  
+ <% }) %> <% } %>
+  <% if (contacts.length < 1) { %>
+    <p>List Contact Empty</p>
+ <% } else{ %> 
+  
+<% contacts.forEach(frs,i => { %>
+    <tr>
+       <td>
+        <%= i+1 %>
+       </td>
+       <td>
+        <%= frs.nama %>
+       </td>
+       <td>
+        <%= frs.nomor %>
+       </td>
+        <td>
+          <button class="action-btn edit-btn">Edit</button>
+          <button class="action-btn delete-btn">Delete</button>
+        </td>
+
+    </tr>
+  
+ <% }) %> <% } %>
+
+
+  //  res.sendFile('./home.html', {root: __dirname})
+    // const myfriends = [{
+    //      number: 1,
+    //      nama:'Rafi',
+    //     no_hp: '1'
+    // },
+    //   { 
+    //      number: 2,
+    //     nama:"Kay",
+    //      no_hp:'2'
+    //   },
+    //   {
+    //      number: 3,
+    //     nama:'Kiko',
+    //      no_hp:"3"
+    //   }
+       
+    // ]
+
+
+
+    //aplication middleware
+// app.use((req,res,next)=>{
+//    console.log('Time ', Date.now())
+//    next()
+// })
+
+// app.use((req,res,next)=>{
+//    console.log('middleware ke dua')
+//    next()
+// })
+
+
+
+
+// app.get('/', (req,res)=>{
+// //    res.json({
+// //       nama: "Wawan"
+// //    })
+
+// //    res.sendFile('./index.html', {root: __dirname})
+
+// res.render('index')
+// })
+
+
+
+//  const fileBuffer = fileSystem.readFileSync("data-contact.json", "utf-8")
+    //  const pfs = JSON.parse(fileBuffer)
+    //  return pfs;
+
+
+      //   const editContact = contacts.map(contact=>{
+    //   if(contact.nama === req.body.namalama){
+    //     return{
+    //       nama:req.body.nama,
+    //       nomor: req.body.nomor
+    //     }
+    //   } else{
+    //       return contact
+    //   }
+      
+     
+    // })
+    // fileSystem.writeFileSync("data-contact.json", JSON.stringify(editContact, null, 2))
+
+
+    // const showDeleteBox = contacts.find(contacts =>contacts.nama === deleteContactName)
+//delete box contact
+
+ //  fileSystem.writeFileSync("data-contact.json", JSON.stringify(New_Contacts, null, 2))
+
+ // const New_Contacts = contacts.filter((contact)=> contact.nama !== deleteContactName)
+
+//   console.log(`Contact nama ${deleteContactName} telah dihapus`)
+//   console.log(New_Contacts)
+
+// const contact = new Connect({ nama: 'ubay', nomor: '08123456789' });
+
+// contact.save()
+//   .then(result => {
+//     console.log('✅ Data berhasil disimpan:', result);
+//   })
+//   .catch(err => {
+//     console.log('❌ Error saat menyimpan:', err);
+//   });
+
+// const dataPath_Json = 'data-contact.json'
+// if(!fileSystem.existsSync(dataPath_Json)){
+//     fileSystem.writeFileSync(dataPath_Json, '[]', 'utf-8')
+// }
+
+  // contacts.push(req.body)
+  // console.log(contacts)
+  // fileSystem.writeFileSync("data-contact.json", JSON.stringify(contacts,null,2))
