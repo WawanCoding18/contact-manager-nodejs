@@ -25,8 +25,8 @@ Display all contacts in a simple list
 1. Clone this repository
 
    ```bash
-   git clone https://github.com/WawanCoding18/front-end-event.git
-   cd front-end-event
+   https://github.com/WawanCoding18/contact-manager-nodejs.git
+   cd contact-manager-nodejs
 
    ```
 
